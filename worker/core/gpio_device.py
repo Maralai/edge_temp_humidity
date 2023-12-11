@@ -1,9 +1,8 @@
 import json
-
-from gpio_handler import GpioHandler
-
 import logging
-from logging_utils import configure_logging
+
+from core.gpio_handler import GpioHandler
+from core.logging_utils import configure_logging
 configure_logging()
 
 class GpioDevice:
@@ -13,7 +12,6 @@ class GpioDevice:
         self.config = config
         self.setup_gpio()
         self.register_homeassistant()
-        self.subscribe_to_command_topic()
       
     def setup_gpio(self):
         raise NotImplementedError

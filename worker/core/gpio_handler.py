@@ -28,6 +28,9 @@ class GpioHandler:
 
     def input(self, pin):
         return self.GPIO.input(pin)
+    
+    def add_event_detect(self, pin, edge, callback, bouncetime):
+        return self.GPIO.add_event_detect(pin, edge, callback=callback, bouncetime=bouncetime)
 
     def cleanup(self):
         self.GPIO.cleanup()

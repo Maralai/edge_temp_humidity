@@ -2,7 +2,7 @@ import paho.mqtt.client as mqtt
 import logging
 import os
 
-from logging_utils import configure_logging
+from core.logging_utils import configure_logging
 configure_logging()
 
 class MqttClientWrapper:
