@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  worker:
+    container_name: worker
+    env_file: .env
+    build:
+      context: .
+      dockerfile: build/Dockerfile
+    privileged: true
+    volumes:
+      - ./worker:/app/worker
+    restart: always
