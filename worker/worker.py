@@ -1,7 +1,7 @@
 import logging
-from worker.mqtt_client import MqttClientWrapper
 from device_manager import DeviceManager
-from logging_utils import configure_logging
+from core.mqtt_client import MqttClientWrapper
+from core.logging_utils import configure_logging
 
 configure_logging()
 

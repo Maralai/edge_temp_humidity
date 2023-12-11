@@ -3,7 +3,7 @@
 # See Readme for more details.
 version: '3.8'
 services:
-  tower-worker:
+  temp_humidity:
     extends:
-      file: ./plugins/tower_light/docker-compose.yaml
-      service: worker
+      file: ./plugins/edge_temp_humidity/docker-compose.yaml
+      service: temp_humidity

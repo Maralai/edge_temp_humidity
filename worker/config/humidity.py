@@ -1,8 +1,20 @@
-from gpio_device import GpioDevice
 import os
 import logging
 
-from logging_utils import configure_logging
+from core.gpio_device import GpioDevice
+from core.logging_utils import configure_logging
 configure_logging()
 
-# class Humidity(GpioDevice):
+class HumiditySensor(GpioDevice):
+    def __init__(self, mqtt_client, config):
+        super().__init__(mqtt_client, config)
+
+    def setup_gpio(self):
+        return True
+    
+    def on_message(self, topic, payload):
+        return True
+    
+    def cleantup(self):
+        return True
+    

@@ -1,9 +1,10 @@
 import json
 import logging
 import os
-from worker.config.humidity import HumiditySensor
-from worker.config.temperature import TemperatureSensor
-from logging_utils import configure_logging
+
+from config.humidity import HumiditySensor
+from config.temperature import TemperatureSensor
+from core.logging_utils import configure_logging
 
 configure_logging()
 

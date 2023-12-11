@@ -1,7 +1,7 @@
 version: "3.8"
 services:
-  worker:
-    container_name: worker
+  temp_humidity:
+    container_name: temp_humidity
     env_file: .env
     build:
       context: .
